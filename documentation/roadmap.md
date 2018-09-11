@@ -3,7 +3,7 @@
 
 - See if you can run mysql and your app on the same lightsail instance. :white_check_mark:
 - Begin storing suggested games in the database.
-- Create database
+- Create database :soon:
 - Create Travis Deployment to LightSail
 - Get project on personal computer :white_check_mark:
 - Send backups of DB to S3 daily 
