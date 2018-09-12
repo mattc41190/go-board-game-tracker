@@ -11,6 +11,10 @@ A question based guide to get started with DB development
     - Run the restore script against that back up to your local environment
     - Run the application as intended.
 
+- How do I set up the database and table structure?
+    - `sudo mysql -p`
+    - `source path/to/scripts/setup-database.sql`
+
 - How do I make change to a schema?
     - TBD
 
