@@ -8,7 +8,8 @@ Use [emojis](https://gist.github.com/rxaviers/7360908) to commuincate status whe
     - Create database :white_check_mark:
     - Create a user in the database :white_check_mark:
     - Create a game in the database :white_check_mark:
-    - Add code that uses GoLang to look up a game :soon:
+    - Add code that uses GoLang to look up a game :white_check_mark:
+    - Add look up code to a route handler :soon:
 - Create Travis Deployment to LightSail
 - Get project on personal computer :white_check_mark:
 - Send backups of DB to S3 daily 
