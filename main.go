@@ -8,8 +8,10 @@ func main() {
 	App := gin.Default()
 	App.LoadHTMLGlob("templates/*")
 
-	addRoutes(App)
-	App.Static("/assets", "./assets")
+	getGameByTitle("Nefarious")
 
-	App.Run(":8080") // listen and serve on 0.0.0.0:8080
+	// addRoutes(App)
+	// App.Static("/assets", "./assets")
+
+	// App.Run(":8080") // listen and serve on 0.0.0.0:8080
 }
