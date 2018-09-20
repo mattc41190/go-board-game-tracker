@@ -19,3 +19,9 @@ Use [emojis](https://gist.github.com/rxaviers/7360908) to commuincate status whe
 - Create Travis Deployment to LightSail
 - Get project on personal computer :white_check_mark:
 - Send backups of DB to S3 daily 
+
+
+## Resources
+
+https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-application/
+https://www.alexedwards.net/blog/organising-database-access
