@@ -10,7 +10,7 @@ import (
 func addRoutes(app *gin.Engine) {
 	app.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{
-			"games": getGamesFromDB(),
+			"games": getGamesFromDBFake(),
 		})
 	})
 

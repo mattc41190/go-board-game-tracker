@@ -7,7 +7,7 @@ type game struct {
 	Rating int
 }
 
-func getGamesFromDB() []game {
+func getGamesFromDBFake() []game {
 	return []game{
 		{
 			Name:   "Nefarious",
@@ -22,4 +22,8 @@ func getGamesFromDB() []game {
 			Rating: 5,
 		},
 	}
+}
+
+func getGamesFromDB() {
+
 }
