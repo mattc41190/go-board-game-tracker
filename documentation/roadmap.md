@@ -12,8 +12,9 @@ Use [emojis](https://gist.github.com/rxaviers/7360908) to commuincate status whe
     - Add look up code to a route handler :white_check_mark:
     - Extract DB code into a module :white_check_mark:
     - Move from hardcoded storage to DB storage :white_check_mark:
-    - Clean up hardcoded storage code :soon:
-    - Write DB tests
+    - Clean up hardcoded storage code :white_check_mark:
+    - Refactor DB to use a generic DataStore interface :white_check_mark:
+    - Write DB tests :soon:
     - Encrypt passwords
     - Look up user by password
 - Create Travis Deployment to LightSail

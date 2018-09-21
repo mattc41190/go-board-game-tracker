@@ -1,7 +1,6 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 	"log"
 	"os"
@@ -18,7 +17,7 @@ var connString = fmt.Sprintf("%s:%s@%s", user, pass, address)
 
 // Env contains all global context
 type Env struct {
-	db *sql.DB
+	db models.DataStore
 }
 
 func main() {
@@ -30,7 +29,7 @@ func main() {
 
 	defer db.Close()
 
-	env := &Env{db: db}
+	env := &Env{db}
 
 	r := gin.Default()
 	r.LoadHTMLGlob("templates/*")
@@ -39,7 +38,6 @@ func main() {
 	r.GET("/add-game", env.addGamePageHandler)
 	r.POST("/add-game", env.addGameFormHandler)
 
-	// addRoutes(r)
 	r.Static("/assets", "./assets")
 
 	r.Run(":8080") // listen and serve on 0.0.0.0:8080

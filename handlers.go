@@ -10,7 +10,7 @@ import (
 )
 
 func (e *Env) homePageHandler(c *gin.Context) {
-	games, err := models.GetAllGames(e.db)
+	games, err := e.db.GetAllGames()
 
 	if err != nil {
 		log.Fatal(err)
@@ -27,7 +27,7 @@ func (e *Env) addGamePageHandler(c *gin.Context) {
 
 func (e *Env) addGameFormHandler(c *gin.Context) {
 	secret := c.PostForm("secret")
-	name := c.PostForm("name")
+	title := c.PostForm("title")
 	link := c.PostForm("more-info-url")
 
 	if secret != "PASS" {
@@ -37,15 +37,15 @@ func (e *Env) addGameFormHandler(c *gin.Context) {
 		return
 	}
 
-	g := models.Game{
-		Name:   name,
+	game := models.Game{
+		Title:  title,
 		Link:   link,
 		Played: false,
 		Rating: 5,
 	}
 
-	fmt.Printf("Saving %v to the database", g.Name)
-	models.SaveGame(e.db, g)
+	fmt.Printf("Saving %v to the database", game.Title)
+	e.db.SaveGame(game)
 
 	c.Redirect(302, "/")
 
